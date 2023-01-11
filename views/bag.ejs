@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<style>
+    .flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex img{
+    margin-top: 5rem;
+  
+  
+}
+.flex2 img{
+    border-radius: 20px;
+    width: 20%;
+}
+.flex p{
+    font-size: 14px;
+    color: #7e818c;
+}
+.flex button{
+    background: #fff;
+    color: #ff3f6c;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid #ff3f6c;
+    display: inline-block;
+    margin-left: 4rem;
+}
+.flex2{
+    display: flex;
+  justify-content: space-between;
+    /* flex-direction: column; */
+    margin: 20px;
+    width: 30%;
+   
+    
+}
+.flex2 h2{
+    margin-top: 2rem;
+}
+.images{
+    margin-left: 2rem;
+}
+.remove{
+    background:none;
+    outline: none;
+    /* color: red; */
+    border: none;
+}
+.remove a{
+    color: black;
+}
+.remove a:hover{
+    color:red
+}
+</style>
+<body>
+    <%- include('header')%>
+
+    <div class="flex">
+        <% if(!imgs){ %>
+        <div>
+            <img src="img/empty-bag (1).webp" alt="">
+            <h4>Hey Your Bag Looks Empty</h4>
+            <p>There is nothing i n your bag Lets add Some item</p>
+
+           <a href="#"> <button>Add Item from wishList</button> </a>
+        </div>
+        <% } %>
+     <!-- <img src="<%=img%>" alt=""> -->
+   
+       
+     
+     
+    </div>
+    <div class="images">
+        
+        <% if(imgs){ %>
+            
+            <% imgs.forEach(function(img) { %>
+                <div class="flex2">
+               <img src="<%=img.image %>" class="i" alt=""> 
+               
+               <h2><%= img.info %></h2>
+               <button class="remove"><a href="">Remove</a></button>
+            </div>
+            <% }); %> 
+       
+           <% } %>
+        
+     </div>
+   
+</body>
+</html>

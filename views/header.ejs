@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+
+    <script src="/javascripts/index.js"></script>    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+ <title>Myntra OnlineShopping.com</title>
+ 
+  
+
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">  <img src="books/c-removebg-preview (1).png" alt=""></a>
+         
+         
+            <ul >
+                <li class="nav-item"><a class="nav-link" href="/rom">ROMANCE</a></li>
+                <li class="nav-item"><a class="nav-link" href="/fant">FANTASY</a></li>
+                <li class="nav-item"><a class="nav-link" href="/humor">HUMOR</a></li>
+                <li class="nav-item"><a  class="nav-link" href="https://www.myntra.com/shop/home-living">LANGUAGE</a></li>
+                <li class="nav-item"><a  class="nav-link" href="https://www.myntra.com/personal-care">BEAUTY</a></li>
+                </ul>
+                <div class="input">
+                    <input type="text" placeholder="Search" id="">
+                </div>
+
+                <div class="icons">
+                
+                   <a href="/login"><img id="pops" onmouseenter="fun()"  src="img/user.png" alt=""></a> 
+                  <img src="img/like.png" alt="">
+                  <a href="/bag"> <img src="img/bag-front-view.png" alt=""> </a>
+                </div>
+            
+          </div>
+        </div>
+      </nav>
+      <div class="card" id="pop" onmouseenter="fun()" onmouseleave="fun2()"  style="width: 18rem;">
+      
+        <div class="card-body">
+
+          <%if(acc){%>
+       <p>Welcome<span id="user"><%=acc%></span> </p>
+       <p><span id="user"><%=num%></span> </p>
+          
+          <%} else{%>
+         
+          <p class="card-text">Welcome to acess  Account and manage orders </p>
+         
+          <button class="btn"> <a href="/login" >Login & Signup</a></button>
+          <%}%>
+        </div>
+        <div class="card-body">
+        
+        <ul>
+          <li><a href="">Orders</a></li>
+          <li><a href="">Wish List</a></li>
+          <li><a href="">Gift Cards</a></li>
+          <li><a href="">Myntra insider</a></li>
+        </ul>
+        </div>
+        <div class="card-body">
+      
+          <ul>
+            <li><a href="">Mynta Credit </a></li>
+            <li><a href="">Coupon</a></li>
+            <li><a href="">Save Cards</a></li>
+            <li><a href="">Myntra insider</a></li>
+            <%if(acc){%>
+              <button id="btn"><a href="/logout">Logout</a></button>
+              <%}%>
+          </ul>
+        </div>
+      </div>
+   
+
+
+
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+</html>
